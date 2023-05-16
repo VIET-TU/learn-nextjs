@@ -20,10 +20,14 @@ export default function Home() {
 
 	return (
 		<div>
-			<Link href="/about">About</Link>
+			<Link href="/about" legacyBehavior>
+				<a>About</a>
+			</Link>
 			<button type="button" onClick={gotoDetailPage}>
 				Click me
 			</button>
 		</div>
 	)
 }
+
+//  The legacy behavior requires onClick be set on the child of next/link (the a ke thua onCLick cua <Link></Link>)
